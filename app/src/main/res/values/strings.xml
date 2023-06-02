@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="astro">Astro</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="sunset">Sunset</string>
+    <string name="moonrise">Moonrise</string>
+    <string name="moonset">Moonset</string>
+    <string name="moon_phase">Moon phase</string>
+    <string name="hourly">Today\'s 24 Hour forecast</string>
+    <string name="moon_illumination">Moon illumination</string>
+    <string name="itemRemoved">Saved city removed</string>
+    <string name="undo">Undo</string>
+    <string name="loading">Loading</string>
+    <string name="smthWrong">Something went wrong</string>
+    <string name="searchCity">Search city</string>
+    <string name="attention">Attention!</string>
+    <string name="sevendays">7 Day forecast</string>
+    <string name="cities">Cities</string>
+    <string name="Direction">Direction</string>
+    <string name="ok">OK</string>
+    <string name="wind">Wind</string>
+    <string name="humidity">Humidity</string>
+    <string name="feelsLike">Feelslike</string>
+    <string name="wind_dir">Wind direction</string>
+    <string name="pressure_mb">Pressure</string>
+    <string name="UV">UV</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

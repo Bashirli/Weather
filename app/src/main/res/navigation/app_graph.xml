@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.bashirli.weather.ui.fragment.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <argument
+            android:name="cityToken"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_homeFragment_to_forecastFragment"
+            app:destination="@id/forecastFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_cityFragment"
+            app:destination="@id/cityFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.bashirli.weather.ui.fragment.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_cityFragment"
+            app:destination="@id/cityFragment"
+            app:popUpTo="@id/splashFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forecastFragment"
+        android:name="com.bashirli.weather.ui.fragment.forecast.ForecastFragment"
+        android:label="fragment_forecast"
+        tools:layout="@layout/fragment_forecast" >
+        <argument
+            android:name="cityData"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/cityFragment"
+        android:name="com.bashirli.weather.ui.fragment.city.CityFragment"
+        android:label="fragment_city"
+        tools:layout="@layout/fragment_city" >
+        <action
+            android:id="@+id/action_cityFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/cityFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_cityFragment_to_searchCityFragment"
+            app:destination="@id/searchCityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchCityFragment"
+        tools:layout="@layout/fragment_search_city"
+        android:name="com.bashirli.weather.ui.fragment.search.SearchCityFragment"
+        android:label="SearchCityFragment" >
+        <action
+            android:id="@+id/action_searchCityFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/searchCityFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

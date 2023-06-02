@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/themeColor"
+    tools:context=".ui.fragment.city.CityFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/buttonGoBack"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:cardElevation="1dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:foreground="@drawable/cardview_click"
+            app:cardCornerRadius="25dp"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/cardSelectedColor"
+          >
+            <ImageView
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:src="@drawable/baseline_arrow_back_ios_new_24"
+                android:layout_height="match_parent">
+
+            </ImageView>
+
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:transitionName="searchLayout"
+            android:id="@+id/editSearch"
+            android:layout_gravity="center"
+
+            android:layout_width="match_parent"
+            app:boxBackgroundColor="@color/white"
+            app:boxCornerRadiusBottomEnd="30dp"
+            app:boxCornerRadiusBottomStart="30dp"
+            app:boxCornerRadiusTopEnd="30dp"
+            android:layout_marginEnd="10dp"
+            app:boxStrokeWidthFocused="2dp"
+            app:endIconMode="clear_text"
+            app:hintTextColor="@color/black"
+            app:endIconTint="@color/black"
+            app:boxCornerRadiusTopStart="30dp"
+            app:boxStrokeColor="@color/black"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:hint="@string/searchCity"
+                android:id="@+id/editSearchText"
+                android:textColor="@color/black"
+                android:inputType="text"
+                android:fontFamily="@font/open_sans_bold"
+                android:drawableStart="@drawable/baseline_search_24"
+                android:drawablePadding="10dp"
+                android:layout_height="match_parent">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:layout_width="match_parent"
+        android:indeterminate="true"
+        android:id="@+id/progressBar"
+        android:visibility="gone"
+        app:indicatorColor="@color/themeColor"
+        android:layout_height="wrap_content">
+
+    </com.google.android.material.progressindicator.LinearProgressIndicator>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCities"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</LinearLayout>

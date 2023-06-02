@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="themeColor">#0066FE</color>
+    <color name="cardBackground">#004CBA</color>
+    <color name="cardBackgroundAlpha">#971F487E</color>
+    <color name="cardSelectedColor">#832A5081</color>
+    <color name="buttonBackground">#6290C8</color>
+    <color name="textLowColor">#B6B6B6</color>
+    <color name="red">#FF0000</color>
+</resources>

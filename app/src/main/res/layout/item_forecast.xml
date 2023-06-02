@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+       <variable
+           name="forecastDay"
+           type="com.bashirli.weather.model.weather.Forecastday" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+   >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/cardBackground"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="3dp"
+        android:layout_margin="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:padding="10dp">
+
+           <androidx.cardview.widget.CardView
+               android:layout_width="wrap_content"
+               app:cardCornerRadius="8dp"
+               app:cardElevation="0dp"
+               app:cardBackgroundColor="@color/themeColor"
+               android:layout_gravity="center"
+               android:layout_height="wrap_content">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="5dp"
+                   android:fontFamily="@font/open_sans_regular"
+                   android:gravity="center"
+                   android:textColor="@color/white"
+                   android:textSize="14sp"
+                   app:setCustomDate="@{forecastDay.date}"></TextView>
+           </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:gravity="center"
+                android:text='@{forecastDay.day.maxtempC+"°C"}'
+                android:textColor="@color/white"
+                android:textSize="20sp">
+
+            </TextView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="25dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:setConditionImage="@{forecastDay.day.condition.icon}">
+
+                </ImageView>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:gravity="center"
+                android:text='@{forecastDay.day.maxwindKph+" kph"}'
+                android:textColor="@color/white"
+                android:textSize="20sp"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:gravity="center"
+                android:text='@{@string/humidity+" "+forecastDay.day.avghumidity+"%"}'
+                android:textColor="@color/white"
+                android:textSize="16sp"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/open_sans_regular"
+                android:gravity="center"
+                android:text='@{forecastDay.day.mintempC+"°C"}'
+                android:textColor="@color/white"
+                android:textSize="20sp"></TextView>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

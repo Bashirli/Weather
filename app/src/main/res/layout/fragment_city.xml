@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/themeColor"
+    tools:context=".ui.fragment.city.CityFragment">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="@string/cities"
+        android:textSize="25sp"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/open_sans_bold"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+     <com.google.android.material.textfield.TextInputLayout
+         android:transitionName="searchLayout"
+         android:id="@+id/editSearch"
+         android:layout_width="match_parent"
+         android:layout_marginStart="20dp"
+         app:boxBackgroundColor="@color/white"
+         app:boxCornerRadiusBottomEnd="30dp"
+         app:boxCornerRadiusBottomStart="30dp"
+         app:boxCornerRadiusTopEnd="30dp"
+
+         app:boxCornerRadiusTopStart="30dp"
+         app:boxStrokeColor="@color/black"
+         style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+         android:layout_marginEnd="20dp"
+         android:layout_height="wrap_content">
+
+         <com.google.android.material.textfield.TextInputEditText
+             android:layout_width="match_parent"
+             android:id="@+id/editSearchText"
+             android:hint="@string/searchCity"
+             android:clickable="true"
+             android:focusable="false"
+             android:focusableInTouchMode="false"
+             android:inputType="none"
+             android:drawableStart="@drawable/baseline_search_24"
+             android:drawablePadding="10dp"
+             android:layout_height="match_parent">
+
+         </com.google.android.material.textfield.TextInputEditText>
+
+     </com.google.android.material.textfield.TextInputLayout>
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rvCities"
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_height="match_parent">
+
+</androidx.recyclerview.widget.RecyclerView>
+
+
+</LinearLayout>
