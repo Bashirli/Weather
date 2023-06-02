@@ -1,9 +1,7 @@
 # Weather
 ![Frame 1](https://github.com/Bashirli/Weather/assets/109737647/1a45eb13-1e21-4da2-83c4-f4eabf9720cd)
 ----------------------------------------
-API is from weatherapi.com.
-
-For educational purposes only.
+API is from weatherapi.com. For educational purposes only.
 ---------------------------------------
  Built With
 ---------------------------------------
