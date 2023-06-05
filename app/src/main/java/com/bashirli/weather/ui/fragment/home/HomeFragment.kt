@@ -107,7 +107,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::infl
             forecastDay=forecastToday
             hourAdapter.updateList(forecastToday.hour)
 
-            forecastAdapter.updateList(myForecast.forecastday.subList(0,4))
+            forecastAdapter.updateList(myForecast.forecastday)
 
         }
     }
